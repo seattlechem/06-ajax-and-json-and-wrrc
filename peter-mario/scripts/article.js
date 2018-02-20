@@ -46,7 +46,7 @@ Article.fetchAll = () => {
   // REVIEW: What is this 'if' statement checking for? Where was the rawData set to local storage?
   if (localStorage.rawData) {
 
-    Article.loadAll();
+    Article.loadAll(JSON.parse(localStorage.rawData));
 
   } else {
 
