@@ -46,8 +46,8 @@ Article.fetchAll = () => {
   // REVIEW: What is this 'if' statement checking for? Where was the rawData set to local storage?
   //if statement is checking if rawData is present in local storage and if there is no rawData in local storage it will fetch the data from JSON file and in the process save that data into local storage.
   if (localStorage.rawData) {
-    console.log('hello');
-    Article.loadAll(JSON.parse(localStorage.getItem(rawData)));
+    Article.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndexPage();
 
   } else {
     $.getJSON('/data/hackeripsum.json')
