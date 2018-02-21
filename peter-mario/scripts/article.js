@@ -50,7 +50,7 @@ Article.fetchAll = () => {
     articleView.initIndexPage();
 
   } else {
-    $.getJSON('/data/hackeripsum.json')
+    $.getJSON('/data/hackerIpsum.json')
       .then(rawData => {
         Article.loadAll(rawData);
         localStorage.setItem('rawData', JSON.stringify(rawData));
